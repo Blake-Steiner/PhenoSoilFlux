@@ -1,0 +1,6 @@
+"y_var","r_squared_x1_JulAug_swc_shallow","adjusted_r_squared_x1_JulAug_swc_shallow","p_value_x1_JulAug_swc_shallow","f_statistic_x1_JulAug_swc_shallow","df_residual_x1_JulAug_swc_shallow","slope_x1_JulAug_swc_shallow","pearson_corr_x1_JulAug_swc_shallow","r_squared_x2_JulAug_swc_deep","adjusted_r_squared_x2_JulAug_swc_deep","p_value_x2_JulAug_swc_deep","f_statistic_x2_JulAug_swc_deep","df_residual_x2_JulAug_swc_deep","slope_x2_JulAug_swc_deep","pearson_corr_x2_JulAug_swc_deep"
+"UD",0.353,0.303,0.019,7.098,13,21.857,0.759,0.129,0.062,0.189,1.923,13,17.265,0.479
+"SD",0.212,0.152,0.084,3.507,13,17.34,0.646,0.044,-0.029,0.453,0.599,13,10.324,0.355
+"DD",0,-0.077,0.96,0.003,13,-0.423,-0.014,0.001,-0.076,0.901,0.016,13,1.39,0.035
+"RD",0.06,-0.012,0.379,0.831,13,-8.094,0.156,0.024,-0.051,0.58,0.322,13,-6.713,0.052
+"GSL",0.282,0.227,0.042,5.109,13,-29.952,-0.54,0.106,0.037,0.237,1.537,13,-23.978,-0.372

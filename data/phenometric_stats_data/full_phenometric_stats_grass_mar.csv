@@ -1,0 +1,6 @@
+"y_var","r_squared_x1_mar_swc_shallow","adjusted_r_squared_x1_mar_swc_shallow","p_value_x1_mar_swc_shallow","f_statistic_x1_mar_swc_shallow","df_residual_x1_mar_swc_shallow","slope_x1_mar_swc_shallow","pearson_corr_x1_mar_swc_shallow","r_squared_x2_mar_swc_deep","adjusted_r_squared_x2_mar_swc_deep","p_value_x2_mar_swc_deep","f_statistic_x2_mar_swc_deep","df_residual_x2_mar_swc_deep","slope_x2_mar_swc_deep","pearson_corr_x2_mar_swc_deep"
+"UD_med",0.18,-0.231,0.576,0.438,2,0.923,0.254,0.147,-0.28,0.617,0.343,2,0.933,0.135
+"SD_med",0.766,0.648,0.125,6.531,2,2.196,0.321,0.952,0.928,0.024,39.811,2,2.741,0.249
+"DD_med",0.601,0.401,0.225,3.008,2,8.646,0.65,0.807,0.711,0.101,8.383,2,11.22,0.689
+"RD_med",0.35,0.025,0.408,1.078,2,5.365,0.468,0.945,0.917,0.028,34.282,2,9.864,0.719
+"GSL_med",0.29,-0.065,0.462,0.816,2,5.005,0.464,0.869,0.803,0.068,13.267,2,9.704,0.766

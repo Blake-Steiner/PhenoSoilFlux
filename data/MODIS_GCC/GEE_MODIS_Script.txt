@@ -1,0 +1,163 @@
+//SCRIPT DESCRIPTION//
+///This script is used to collect time series GCC data from MODIS MCD43A4 Daily 500 m
+//  product for Ameriflux site US-SRM. 
+
+//select start year
+// this is a large dataset, so will need to split the years and manually copy and paste 
+// time series values to a spreadsheet for now
+var start = '2011-01-01';
+
+//select end year
+var end = '2020-12-31';
+
+// Do you want to save the output as .csv-file?
+var save = false;
+
+// Specify Output directory
+var output_dir = 'Thesis';
+
+//Specify geogrpahy for naming exports
+var geography = "SRM";
+
+// Select study outline and scale 
+var studyoutline =  FT_W;
+print(studyoutline);
+
+// Buffer area for point
+var buffTower = studyoutline.buffer(1000);
+
+// do you want to display the layers (can be set to true or false)
+var display = true;
+
+// Define visualization parameters so the images are both presented in the same way.
+//var vis2 = {min:-0.5, max:0.9};
+
+// Get a palette: a list of hex strings
+//var palettes = require('users/gena/packages:palettes');
+//print(palettes);
+
+
+//************* Calculate NDVI FROM MODIS *****************//
+function addNDVI(image){
+              var ndvi = image.normalizedDifference(['Nadir_Reflectance_Band2', 'Nadir_Reflectance_Band1']).rename('ndvi').copyProperties(image, image.propertyNames())
+              print(" ...Calculating NDVI from Bands 2 (IR) and 1 (R)")
+              return image.addBands([ndvi])
+                
+          }
+          
+
+function addGCC(image){
+              var gcc = image.expression(
+              //compute the gcc
+              '(g) / (g + b + r)',
+              {
+                'g': image.select('Nadir_Reflectance_Band4'),
+                'b': image.select('Nadir_Reflectance_Band3'),
+                'r': image.select('Nadir_Reflectance_Band1')
+              }).rename('gcc')//.copyProperties(image, image.propertyNames());
+              print(" ...Calculating GCC from Bands 3 (b), 4 (g), and 1 (r)");
+              return image.addBands([gcc]);
+                
+          }
+
+//************* LOAD DATA FROM MODIS *****************//
+
+  print("... Retrieving image collection");
+
+// Filter landsat image collection by year and date ranges, and geography boundaries. Cloud mask applied to collection
+ var collection = ee.ImageCollection('MODIS/006/MCD43A4')
+ .filterDate(start, end) // Date range
+ //filter by the set variables above for day of year range and year range
+ //.map(cloud_mask) //Cloud mask
+ .map(addGCC) //calculate GCC from image collection
+ .map(addNDVI) //calculate NDVI from image collection
+ .filterBounds(studyoutline); //only images within study area; studyoutline OR buffer variable
+  
+print(collection);
+
+// View the median composite
+var vizParams = {bands: ['Nadir_Reflectance_Band1', 'Nadir_Reflectance_Band4', 'Nadir_Reflectance_Band3'], min: 0, max: 2000};
+Map.addLayer(collection.median().clip(buffTower), vizParams, 'collection');
+
+// Create palettes for display of GCC
+var gcc_pal = ['#d73027', '#f46d43', '#fdae61', '#fee08b', '#d9ef8b',
+'#a6d96a'];
+
+var GCCmed = collection.select('gcc').median();
+// Display GCC results on map
+//Map.addLayer(GCCmed, {min:0, max:1, palette: gcc_pal}, 'GCC');
+
+//************* Timeseries of GCC from MODIS *****************//
+var chart = ui.Chart.image.series({
+    imageCollection: collection.select('gcc'),
+    region: studyoutline // studyoutline OR buffTower
+    }).setOptions({
+      interpolateNulls: false,
+      lineWidth: 1,
+      pointSize: 3,
+      title: 'GCC over Time at SRM',
+      vAxis: {title: 'GCC'},
+      hAxis: {title: 'Date', format: 'YYYY-MMM', gridlines: {count: 12}}
+    });
+print(chart);
+
+
+//************* Timeseries of NDVI from MODIS *****************//
+var chart2 = ui.Chart.image.series({
+    imageCollection: collection.select('ndvi'),
+    region: studyoutline // studyoutline OR buffTower
+    }).setOptions({
+      interpolateNulls: false,
+      lineWidth: 1,
+      pointSize: 3,
+      title: 'NDVI over Time at SRM',
+      vAxis: {title: 'NDVI'},
+      hAxis: {title: 'Date', format: 'YYYY-MMM', gridlines: {count: 12}}
+    });
+print(chart2);
+
+// Center the map on the image.
+Map.centerObject(studyoutline);
+
+//Add buffered layer
+Map.addLayer(buffTower, {}, 'BuffTower');
+
+
+//************* Statistics *****************//
+
+//Calculate the mean, median, max, min, and standard deviation
+
+// first start with setting up a reducer combo with mean
+//var reducer1 = ee.Reducer.mean();
+
+//var reducers = reducer1.combine({reducer2: ee.Reducer.median(), sharedInputs: true})
+//                       .combine({reducer2: ee.Reducer.max(), sharedInputs: true})
+//                       .combine({reducer2: ee.Reducer.min(), sharedInputs: true})
+//                       .combine({reducer2: ee.Reducer.stdDev(), sharedInputs: true});
+
+// Get mean and SD in every band by combining reducers.
+var SelectImageForStats = collection.select(['gcc', 'ndvi']);
+
+var statsCollection = SelectImageForStats.map(function(stats){
+  var startDOY = ee.Date(stats.get('system:time_start')).getRelative('day', 'year');
+  var endDOY = ee.Date(stats.get('system:time_end')).getRelative('day', 'year');
+  var collectionForStats = SelectImageForStats
+    .reduce(ee.Reducer.stdDev().combine(ee.Reducer.mean(), null, true));
+  return stats.addBands(collectionForStats);
+});
+
+//print(statsCollection);
+
+////////////////////////////////////////////////////////////////////////////////////////////
+///                           EXTRACT TIME SERIES DATA
+////////////////////////////////////////////////////////////////////////////////////////////
+//Add exports to tasks tab
+//var batch = require('users/fitoprincipe/geetools:batch');
+//var ImageCollectionForExport = statsCollection.select();
+//print('Selected Images for Export',ImageCollectionForExport);
+
+//batch.Download.ImageCollection.toDrive(ImageCollectionForExport, "MODIS_ImageCollection",{
+//  name: 'MODIS_2004_2010',
+//  scale: 500,
+//  region: studyoutline
+//});
