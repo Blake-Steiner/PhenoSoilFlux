@@ -1,4 +1,0 @@
-"y_var","r_squared_x1_oct_swc_shallow","adjusted_r_squared_x1_oct_swc_shallow","p_value_x1_oct_swc_shallow","f_statistic_x1_oct_swc_shallow","df_residual_x1_oct_swc_shallow","slope_x1_oct_swc_shallow","pearson_corr_x1_oct_swc_shallow","r_squared_x2_oct_swc_deep","adjusted_r_squared_x2_oct_swc_deep","p_value_x2_oct_swc_deep","f_statistic_x2_oct_swc_deep","df_residual_x2_oct_swc_deep","slope_x2_oct_swc_deep","pearson_corr_x2_oct_swc_deep"
-"DD_med",0.004,-0.329,0.925,0.011,3,0.608,0.059,0.098,-0.202,0.608,0.327,3,7.362,0.313
-"RD_med",0.012,-0.317,0.86,0.037,3,0.945,0.11,0.089,-0.214,0.625,0.295,3,5.874,0.299
-"GSL_med",0.022,-0.304,0.813,0.066,3,1.213,0.147,0.073,-0.236,0.66,0.237,3,5.103,0.271
