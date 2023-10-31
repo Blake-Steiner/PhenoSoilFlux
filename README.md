@@ -1,16 +1,18 @@
-# PhenoSoilFlux
-Repository for the reproduction of the work done in the manuscript. 
+# "PhenoSoilFlux"
+Repository for the reproduction of the work done in the manuscript titled, "Using Phenology to Unravel Differential Soil Water Use and Productivity in a Semiarid Savanna". 
 -------------------------------------------------------------------------------------
-Files and Scripts for Steiner et al., Phenology, GPP, and Soil Water Content paper
+Files and Scripts for "Using Phenology to Unravel Differential Soil Water Use and
+Productivity in a Semiarid Savanna" by Steiner et al., 2023 paper accepted in _Ecosphere_.
 
 Primary Author: Blake Steiner (bsteiner@odu.edu)
 
 Date: April 2023
+Modified: October 2023
 
 Description:
 	Welcome! This readme will serve as a guide to the data and code 
 	used for the paper. Below, you will find descriptions of each folder and their 
-	contents to provide context. For the sake of space, raw imagery is accessible in
+	contents to provide context. For the sake of space, imagery is accessible in
 	online repositories such as Google Earth Engine or the Phenocam Network and
 	are freely accessible. However, I have included example scripts on how those
 	images were processed. As described below, there is a "super script"
@@ -18,28 +20,26 @@ Description:
 	images were joined, analyzed, and visualized. A critical component to this 
 	is the r "SuperImage" image file under R_images. This is a copy of all
 	data frames, vectors, and other R elements needed to reproduce the work and
-	speeds things along. Thank you for your time and service!
+	speeds things along. Thank you for your time!
 
 -------------------------------------------------------------------------------------
 Folders:
 
 ##################
-"data"
+"FluxTower_data"
 
-	1. Analyses_Figures - This folder has data for each 
-	for each figure / table in the paper
+	1.  Subfolers: Daily_Data, Data, and MetaData. Dail_Data is the flux data aggregated from 30 minutes to days.
+ 	Data is the 30 minute, gap-filled partitioned flux data. MetaData defines the headers for the two other 	folders. 
+  	
+   	2. USSRM_Daily_Flux_2004_2020.csv is the output of the R script in this directory and contains all the 
+    	relavent soil water and flux data for analyses. 
 
-	2. FluxTower_data - This folder contains US-SRM flux tower data from 2004-2020 and scripts 
-	to process the data
+     	3. USSRM_Fluxes_Processed.R is the R script that takes in the 30 minute data and outputs daily data and 	calculates other factors. 
 
-	3. MODIS_GCC - This folder contains the Google Earth Engine Script to collect MODIS GCC 
-	data from in and around the flux tower
+##################
+"Supplemental_Data_AppendixS1"
 
-	4. PhenoCam_GCC - This folder has the data and scripts to process phenocam imagery,
- 	normalize it, and derive phenometrics
-
-	5. phenometric_stats_data - This contains all the resulting correlation statistics
-	from R scripts: "Phenometric_Analaysis_MODIS" and "Phenometrics_Analysis_Short"
+	1. Contains a csv file of all the correlations between phenometrics for understory, trees, and ecosystem and 	soil water content at different depeths across different seasons for Table S1 in supplemental material. 
 
 #################
 "modis_processing"
