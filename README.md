@@ -7,6 +7,7 @@ Productivity in a Semiarid Savanna" by Steiner et al., 2023 paper accepted in _E
 Primary Author: Blake Steiner (bsteiner@odu.edu)
 
 Date: April 2023
+
 Modified: October 2023
 
 Description:
@@ -34,7 +35,7 @@ Folders:
    	2. USSRM_Daily_Flux_2004_2020.csv is the output of the R script in this directory and contains all the 
     	relavent soil water and flux data for analyses. 
 
-     	3. USSRM_Fluxes_Processed.R is the R script that takes in the 30 minute data and outputs daily data and 	calculates other factors. 
+	3. USSRM_Fluxes_Processed.R is the R script that takes in the 30 minute data and outputs daily data and 	calculates other factors. 
 
 ##################
 "Supplemental_Data_AppendixS1"
