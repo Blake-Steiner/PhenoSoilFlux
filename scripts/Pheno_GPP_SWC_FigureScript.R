@@ -117,31 +117,32 @@ plot.theme <- theme(axis.title.x = element_text(color = "black",
 
 #Climatology
 plot.theme.cli <- theme(axis.title.x = element_text(color = "black", 
-                                                size = 14), 
+                                                size = 11), 
                     axis.title.y = element_text(color = "black", 
-                                                size = 14,
+                                                size = 11,
                                                 hjust = 0.6,
                                                 vjust = 1),                                                                       
-                    axis.text.x = element_text(size = 14),
-                    axis.text.y = element_text(size = 14),
+                    axis.text.x = element_text(size = 12),
+                    axis.text.y = element_text(size = 12),
                     #legend.title = element_blank(),
-                    legend.text = element_text(size = 14),
-                    legend.position = c(1,1),
-                    legend.justification = c(1,1),
+                    legend.text = element_text(size = 12),
+                    #legend.position = c(1,1),
+                    #legend.justification = c(1,1),
+                    legend.position = "top",
                     plot.title = element_text(color = "black",
-                                              size = 14, hjust = 0.5),
+                                              size = 12, hjust = 0.5),
                     panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                     panel.background = element_blank(), axis.line = element_line(colour = "black"))
 
 #Theme for models
 plot.theme.model <- theme(axis.title.x = element_text(color = "black", 
-                                                size = 14), 
+                                                size = 12), 
                     axis.title.y = element_text(color = "black", 
-                                                size = 14),                                                                       
-                    axis.text.x = element_text(size = 14),
-                    axis.text.y = element_text(size = 14),
+                                                size = 12),                                                                       
+                    axis.text.x = element_text(size = 12),
+                    axis.text.y = element_text(size = 12),
                     legend.title = element_blank(),
-                    legend.text = element_text(size = 14),
+                    legend.text = element_text(size = 12),
                     legend.position = c(1,1),
                     legend.justification = c(1,1),
                     plot.title = element_text(color = "black",
@@ -152,23 +153,23 @@ plot.theme.model <- theme(axis.title.x = element_text(color = "black",
 
 #theme for phenometrics and GPP
 plot.theme_phenoMet_gpp <- theme(axis.title.x = element_text(color = "black", 
-                                                size = 16), 
+                                                size = 12), 
                     axis.title.y = element_text(color = "black", 
-                                                size = 16),                                                                       
-                    axis.text.x = element_text(size = 16),
-                    axis.text.y = element_text(size = 16),
+                                                size = 12),                                                                       
+                    axis.text.x = element_text(size = 10),
+                    axis.text.y = element_text(size = 10),
                     #legend.title = element_blank(),
-                    legend.text = element_text(size = 14),
+                    legend.text = element_text(size = 12),
                     #legend.position = c(1,1),
                     #legend.justification = c(1,1),
                     plot.title = element_text(color = "black",
-                                              size = 16, hjust = 0.5),
+                                              size = 12, hjust = 0.5),
                     panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                     panel.background = element_blank(), axis.line = element_line(colour = "black"),
                     strip.text.x = element_text(
-                      size = 14, color = "black", face = "bold"),
+                      size = 10, color = "black", face = "bold"),
                     strip.text.y = element_text(
-                      size = 14, color = "black", face = "bold"),
+                      size = 10, color = "black", face = "bold"),
                     strip.background = element_rect(
                       color="black", fill="white", linetype="solid"
                     )
@@ -205,13 +206,13 @@ plot.theme.modis.phenometric <- theme(axis.title.x = element_text(color = "black
 
 # time series (ts) theme
 plot.theme.ts <- theme(axis.title.x = element_text(color = "black", 
-                                                size = 16), 
+                                                size = 12), 
                     axis.title.y = element_text(color = "black", 
-                                                size = 16),                                                                       
-                    axis.text.x = element_text(size = 14),
-                    axis.text.y = element_text(size = 14),
+                                                size = 12),                                                                       
+                    axis.text.x = element_text(size = 12),
+                    axis.text.y = element_text(size = 12),
                     #legend.title = element_blank(),
-                    legend.text = element_text(size = 14),
+                    legend.text = element_text(size = 12),
                     legend.position = "top",
                     #legend.justification = c(1,1),
                     plot.title = element_text(color = "black",
@@ -229,23 +230,23 @@ plot.theme.ts <- theme(axis.title.x = element_text(color = "black",
 
 #general phenometrics themes
 plot.theme.phenometric <- theme(axis.title.x = element_text(color = "black", 
-                                                size = 16), 
+                                                size = 12), 
                     axis.title.y = element_text(color = "black", 
-                                                size = 16),                                                                       
-                    axis.text.x = element_text(size = 14),
-                    axis.text.y = element_text(size = 14),
+                                                size = 12),                                                                       
+                    axis.text.x = element_text(size = 12),
+                    axis.text.y = element_text(size = 12),
                     #legend.title = element_blank(),
-                    legend.text = element_text(size = 14),
+                    legend.text = element_text(size = 12),
                     #legend.position = c(1,1),
                     #legend.justification = c(1,1),
                     plot.title = element_text(color = "black",
-                                              size = 18, hjust = 0.5, face = "bold"),
+                                              size = 114, hjust = 0.5, face = "bold"),
                     panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                     panel.background = element_blank(), axis.line = element_line(colour = "black"),
                     strip.text.x = element_text(
-                      size = 14, color = "black", face = "bold"),
+                      size = 10, color = "black", face = "bold"),
                     strip.text.y = element_text(
-                      size = 14, color = "black", face = "bold"),
+                      size = 10, color = "black", face = "bold"),
                     strip.background = element_rect(
                       color="black", fill="white", linetype="solid"
                     )
@@ -391,6 +392,7 @@ rm(max_gcc, min_gcc, min_gcc_grass,
 #-- Figure 1 CLIMATOLOGY PLOTS
 ################
 
+
 # ECOSYSTEM GCC
 modis_gcc_cli.plot <- cli_df %>%
   #filter(year == 2019) %>%
@@ -407,41 +409,71 @@ modis_gcc_cli.plot <- cli_df %>%
   #geom_linerange(alpha = 1, aes(ymin = gcc_min, ymax = gcc_max), color = "grey70") +
   geom_ribbon(alpha = 0.3, aes(ymin = gcc_min, ymax = gcc_max)) +
   geom_point(aes(color = sub_season), 
-             size = 3, alpha = 0.7) +
+             size = 2, alpha = 0.7) +
   xlab("") +
   ylab("GCC MODIS") +
   plot.theme.cli +
-  theme(legend.position = c(1, 1))
+  theme(legend.position = "none") +
+  guides(color = "none")
 
 #TREE and GRASS CLIMATOLOGY
+#plant_gcc_cli.plot <- cli_df %>%
+#  ggplot() +
+#  geom_vline(xintercept = 81, color = "darkgreen", size = 1.5) + #TREE PHENOCAM 
+#  geom_vline(xintercept = 66, color = "darkgreen", size = 1.5) + #TREE PHENOCAM 
+#  geom_vline(xintercept = 96, color = "darkgreen", size = 1.5) + #TREE PHENOCAM 
+#  geom_vline(xintercept = 82, color = "purple", size = 1.5, 
+#             linetype = "dashed") +  #MODIS mean
+#  geom_vline(xintercept = 187, color = "gold", size = 1.5) +
+#  geom_vline(xintercept = 176, color = "gold", size = 1.5) +
+#  geom_vline(xintercept = 199, color = "gold", size = 1.5) +
+#  geom_vline(xintercept = 194, color = "purple", size = 1.5, 
+#             linetype = "dashed") +
+#  geom_ribbon(alpha = 0.3, aes(x = DOY, y = tree_avg, 
+#                               ymin = tree_min, ymax = tree_max), 
+#              fill = "#999999") +
+#  geom_ribbon(alpha = 0.6, aes(x = DOY, y = grass_avg, 
+#                                  ymin = grass_min, ymax = grass_max), 
+#                 fill = "#99CCCC") +
+#  geom_point(aes(x = DOY, y = tree_avg, color = sub_season), 
+#             size = 2, alpha = 1, shape = 24, fill = NA) +
+#  geom_point(aes(x = DOY, y = grass_avg, color = sub_season),  
+#             size = 2, alpha = 0.8, shape = "circle") +
+#  xlab("") +
+#  ylab("Relative GCC") +
+#  plot.theme.cli +
+#  scale_shape_manual(name = "Plant Type", values = c(24, "circle")) +
+#  labs(color = "Sub-season", shape = "Plant Type") +
+#  theme(legend.position = "bottom", legend.box = "vertical",
+#       legend.margin = margin())
+
+
 plant_gcc_cli.plot <- cli_df %>%
   ggplot() +
-  geom_vline(xintercept = 81, color = "darkgreen", size = 1.5) + #TREE PHENOCAM 
-  geom_vline(xintercept = 66, color = "darkgreen", size = 1.5) + #TREE PHENOCAM 
-  geom_vline(xintercept = 96, color = "darkgreen", size = 1.5) + #TREE PHENOCAM 
-  geom_vline(xintercept = 82, color = "purple", size = 1.5, 
-             linetype = "dashed") +  #MODIS mean
+  geom_vline(xintercept = 81, color = "darkgreen", size = 1.5) + # TREE PHENOCAM 
+  geom_vline(xintercept = 66, color = "darkgreen", size = 1.5) + # TREE PHENOCAM 
+  geom_vline(xintercept = 96, color = "darkgreen", size = 1.5) + # TREE PHENOCAM 
+  geom_vline(xintercept = 82, color = "purple", size = 1.5, linetype = "dashed") +  # MODIS mean
   geom_vline(xintercept = 187, color = "gold", size = 1.5) +
   geom_vline(xintercept = 176, color = "gold", size = 1.5) +
   geom_vline(xintercept = 199, color = "gold", size = 1.5) +
-  geom_vline(xintercept = 194, color = "purple", size = 1.5, 
-             linetype = "dashed") +
-  geom_ribbon(alpha = 0.3, aes(x = DOY, y = tree_avg, 
-                               ymin = tree_min, ymax = tree_max), 
-              fill = "#999999") +
-  geom_ribbon(alpha = 0.6, aes(x = DOY, y = grass_avg, 
-                                  ymin = grass_min, ymax = grass_max), 
-                 fill = "#99CCCC") +
-  geom_point(aes(x = DOY, y = tree_avg, color = sub_season), 
-             size = 3, alpha = 1, shape = 24, fill = NA) +
-  geom_point(aes(x = DOY, y = grass_avg, color = sub_season),  
-             size = 3, alpha = 0.8, shape = "circle") +
+  geom_vline(xintercept = 194, color = "purple", size = 1.5, linetype = "dashed") +
+  geom_ribbon(alpha = 0.3, aes(x = DOY, y = tree_avg, ymin = tree_min, ymax = tree_max), fill = "#999999") +
+  geom_ribbon(alpha = 0.6, aes(x = DOY, y = grass_avg, ymin = grass_min, ymax = grass_max), fill = "#99CCCC") +
+  geom_point(aes(x = DOY, y = tree_avg, color = sub_season, shape = "Tree"), size = 2, alpha = 1, fill = NA) +
+  geom_point(aes(x = DOY, y = grass_avg, color = sub_season, shape = "Grass"), 
+             size = 2, alpha = 0.8) +
   xlab("") +
   ylab("Relative GCC") +
-  scale_shape_manual(name = "Plant Type", values = c(24, "circle")) +
   plot.theme.cli +
-  theme(legend.position = "bottom", legend.box = "vertical",
-        legend.margin = margin())
+  scale_shape_manual(name = "Plant Type", values = c("Tree" = 24, "Grass" = 1)) +
+  scale_color_manual(labels = c("Spring", "Summer", "Winter"), 
+                     values = c("spring"="#F8766D", "summer"="#00BA38", "winter"="#619CFF")) +
+  labs(shape = "Plant Type") +
+  theme(legend.margin = margin(),
+        legend.title = element_text(face = "bold")) +
+  guides(color = guide_legend(title = "Sub-Season"))
+
 
 #SOIL WATER CONTENT SHALLOW (< 45 cm)
 swc_cli_shallow.plot <- cli_df %>%
@@ -457,11 +489,12 @@ swc_cli_shallow.plot <- cli_df %>%
   geom_vline(xintercept = 82, color = "purple", size = 1.5, linetype = "dashed") +
   #geom_linerange(alpha = 1, aes(ymin = swc_shallow_min, ymax = swc_shallow_max), color = "grey70") +
   geom_ribbon(alpha = 0.3, aes(ymin = swc_shallow_min, ymax = swc_shallow_max)) +
-  geom_point(aes(color = sub_season), size = 3, alpha = 0.7) +
+  geom_point(aes(color = sub_season), size = 2, alpha = 0.7) +
   xlab("") +
   ylab("SWC (%) from 2.5 - 30 cm ") +
   plot.theme.cli +
-  theme(legend.position = c(1, 1))
+  theme(legend.position = "none") +
+  guides(color = "none")
 
 #SOIL WATER CONTENT DEEP (>= 45 cm)
 swc_cli_deep.plot <- cli_df %>%
@@ -476,10 +509,11 @@ swc_cli_deep.plot <- cli_df %>%
   geom_vline(xintercept = 194, color = "purple", size = 1.5, linetype = "dashed") +
   geom_vline(xintercept = 82, color = "purple", size = 1.5, linetype = "dashed") +
   geom_ribbon(alpha = 0.3, aes(ymin = swc_deep_min, ymax = swc_deep_max)) +
-  geom_point(aes(color = sub_season), size = 3, alpha = 0.7) +
+  geom_point(aes(color = sub_season), size = 2, alpha = 0.7) +
   ylab("SWC (%) from 45 - 130 cm") +
   plot.theme.cli +
-  theme(legend.position = c(1, 1))
+  theme(legend.position = "none") +
+  guides(color = "none")
 
 #GPP FROM US-SRM FLUX TOWER
 gpp_cli.plot <- cli_df %>%
@@ -495,11 +529,12 @@ gpp_cli.plot <- cli_df %>%
   geom_vline(xintercept = 194, color = "purple", size = 1.5, linetype = "dashed") +
   geom_vline(xintercept = 82, color = "purple", size = 1.5, linetype = "dashed") +
   geom_ribbon(alpha = 0.3, aes(ymin = gpp_min, ymax = gpp_max)) +
-  geom_point(aes(color = sub_season), size = 3, alpha = 0.7) +
+  geom_point(aes(color = sub_season), size = 2, alpha = 0.7) +
   xlab("DOY") +
   labs(y = expression(Tower~GPP~(g~CO[2]~m^-2~d^-1))) +
   plot.theme.cli +
-  theme(legend.position = c(1, 1))
+  theme(legend.position = "none") +
+  guides(color = "none")
 
 
 # TOTAL PRECIPITATION AT US-SRM
@@ -517,11 +552,17 @@ precip_cli.plot <- cli_df %>%
   geom_vline(xintercept = 194, color = "purple", size = 1.5, linetype = "dashed") +
   geom_ribbon(alpha = 0.3, aes(ymin = precip_min, ymax = precip_max)) +
   geom_point(aes(color = sub_season), 
-             size = 3, alpha = 0.7) +
+             size = 2, alpha = 0.7) +
   xlab("") +
   ylab("Precipitation (mm)") +
   plot.theme.cli +
-  theme(legend.position = c(1, 1))
+  theme(legend.position = "none") +
+  guides(color = "none")
+
+
+#Create PDF
+ggsave(path = getwd(), filename =  "Figure1_Climatology.pdf", width = 18 / 2.54,
+       height = 22/ 2.54, device = "pdf", dpi = 600)
 
 #GROUP THE PLOTS TOGETHER
 ggpubr::ggarrange(modis_gcc_cli.plot,
@@ -531,10 +572,11 @@ ggpubr::ggarrange(modis_gcc_cli.plot,
                   gpp_cli.plot,
                   swc_cli_deep.plot,
                   align = "hv", #align in both directions / axes
-                  ncol=2, nrow=3, common.legend = TRUE, legend="top",
+                  ncol=2, nrow=3, common.legend = TRUE, #legend="top", 
                   labels =  c("A", "D", "B", "E", "C", "F"),   #"AUTO",
-                  hjust = -1,
-                  vjust = -0.9)
+                  hjust = -0.7,
+                  vjust = 1.0)
+
 
 
 dev.off()
@@ -759,7 +801,11 @@ ud.modis.gpp.plot <- pheno_gpp_annual %>%
   labs(y = NULL) +
   #annotate(geom = "text", x = 100, y = 500, label = "R2 adj.= -0.06") +
   #geom_text(aes(label = year), hjust = -0.3, vjust = -0.5) +
-  plot.theme_phenoMet_gpp 
+  plot.theme_phenoMet_gpp +
+  theme(
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank()
+  )
 
 
 #SCATTER PLOT
@@ -773,19 +819,40 @@ rd.modis.gpp.plot <- pheno_gpp_annual %>%
   xlab("RD (DOY)") +
   ylim(0, 600) +
   labs(y = NULL) +
-  annotate(geom = "text", x = 250, y = 500, size = 5,
+  annotate(geom = "text", x = 260, y = 500, size = 3.5,
            label = expression(R^2~'='~'0.69*')) +
   #geom_text(aes(label = year), hjust = -0.3, vjust = -0.5) +
-  plot.theme_phenoMet_gpp 
+  plot.theme_phenoMet_gpp +
+  theme(
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank()
+  )
+
 
 #Group the plots together
 ggpubr::ggarrange(gsl.modis.gpp.plot,
-                  ud.modis.gpp.plot, 
+                  #NULL,
+                  ud.modis.gpp.plot,
+                  #NULL,
                   rd.modis.gpp.plot,
                   align = "hv", #align in both directions / axes
                   ncol=3, nrow=1, common.legend = TRUE, legend="top",
-                  labels = "AUTO")
+                  labels = c("A", 
+                             #"", 
+                             "B", 
+                             #"", 
+                             "C"),
+                  hjust = -5.5,
+                  vjust = 1.5
+                  #,widths = c(1, -0.15, 1, -0.15, 1)
+                  )
+#Create PDF
+ggsave(path = getwd(), filename = "Figure2_GPP_Phenometric.pdf",
+       width = 18 / 2.54, height = 7.5 / 2.54, #was 10 / 2.54
+       dpi = 600)
 
+
+dev.off()
 
 #STATS
 ##
@@ -857,7 +924,7 @@ time_lag.plot <- timelag_df  %>%
   ylim(-1, 1) +
   xlim(0,8) +
   geom_text(aes(label = ifelse(sig_level=="Sig.", "*", "")),
-            color = "black", angle = 0, size = 8,
+            color = "black", angle = 0, size = 7,
             vjust = 0.2) +
   labs(shape = "Water Variable") +
   scale_shape_discrete(name = "Water Variable", labels = water.labs) +
@@ -880,18 +947,18 @@ capletters <- c("A: SWC Shallow and Tower GPP",
 
 
 #Add tags
-tag_facet(time_lag.plot , size = 5, tag_pool = capletters,
+tag_facet(time_lag.plot , size = 4, tag_pool = capletters,
           open = " ", close = " ", vjust = 0.95, hjust = -0.1) 
 
 
+#Create PDF
+ggsave(path = getwd(), filename = "Figure3_TimeLag.pdf",
+       width = 18 / 2.54, height = 22 / 2.54, 
+       dpi = 600)
+
+dev.off()
 
 rm(time_lag.plot)
-
-
-
-
-
-
 
 
 
@@ -1070,4 +1137,12 @@ pheno_trend_fig <- pheno_trend_df %>%
                      values = c(15, 19, 17)) +
   guides(shape = guide_legend(override.aes = list(color = c("#666666", "blue", "red")))) +
   plot.theme.phenometric 
+
+
+#Create PDF
+ggsave(path = getwd(), filename = "Figure4_SWC_PhenoMetric.pdf",
+       width = 18 / 2.54, height = 12 / 2.54, 
+       dpi = 600)
+
+dev.off()
 
